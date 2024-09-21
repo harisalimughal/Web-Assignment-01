@@ -63,6 +63,10 @@
 
 
 /* <!--------!> -----------------------------------------------------------------------------------*/
+
+body{
+    background-color: var(--background-color);
+}
 *{
     padding: 0;
     margin: 0;
@@ -82,7 +86,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 8%;  /* Reduced padding for better visibility */
+    padding: 15px 8%; 
     background-color: var(--background-color);
     position: sticky;
     top: 0;
@@ -429,3 +433,171 @@ footer p:nth-child(2){
     bottom: 35px;
     font-size: 14px;
 }
+
+
+
+/*-------------- Faculty ---------------------------*/
+
+
+
+
+
+/* When a section is targeted, make it visible */
+
+#faculty:target {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease, height 0s ease 0s;
+}
+
+#computing:target {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease, height 0s ease 0s;
+}
+
+#elective:target {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease, height 0s ease 0s;
+}
+
+#maths:target {
+    visibility: visible;
+    height: auto;
+    opacity: 1; 
+    transition: opacity 0.5s ease, height 0s ease 0s;
+}
+
+
+
+/* Show the first section (courses) by default */
+#courses:target {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.5s ease, height 0s ease 0s;
+}
+
+
+.container  {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    
+}
+
+
+
+
+.nav {
+    padding: 10px ;
+    margin: 40px;
+
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    border-radius: 50px;
+    padding: 15px 25px;
+    flex-wrap: wrap; 
+}
+
+.nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: #ff7597;
+    box-shadow: 0 8px 15px rgba(255, 116, 157, 0.3);
+    transition: all 0.3s ease;
+}
+
+
+.nav ul li a:hover {
+    background-color: #ff2b4b;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(255, 43, 75, 0.5);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+.filters {
+    margin: 20px 0;
+}
+.filters label {
+    margin-right: 10px;
+}
+.course-list, .faculty-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.course-item, .faculty-item {
+    background-color: var(--about-bg);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 5px;
+    width: calc(33.33% - 20px);
+    background-color: var(--about-bg);
+    color: var(--text-color);
+}
+
+#faculty-items h2{
+    color: var(--text-color);
+
+}
+
+
+.faculty-item img {
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+}
+
+
+
+@media (max-width: 768px) {
+    .course-item, .faculty-item {
+        width: 100%;
+    }
+}
+
+.course-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #e74c3c;
+}
+
+.faculty-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #e74c3c;
+}
+
+
+
+
+
+
+/* -------------------------------- Gallery -------------------------------------------- */
+
+

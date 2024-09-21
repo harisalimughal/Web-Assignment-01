@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Sites</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
             input[type=text], select, textarea {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccc;
+            border: 1px solid var(--text-color);
             border-radius: 4px;
             box-sizing: border-box;
             margin-top: 6px;
@@ -31,7 +32,7 @@
 
             input[type=submit] {
             background-color: #f9004d;
-            color: white;
+            color: var(--text-color);
             padding: 12px 20px;
             border: none;
             border-radius: 4px;
@@ -44,12 +45,12 @@
 
             .container {
             border-radius: 5px;
-            background: #101010;
+            background: var(--about-bg);
             padding: 20px;
-            color: white;
+            color: var(--text-color);
             }
             h1{
-                color: white;
+                color: var(--text-color);
                 margin: 20px 0px 20px;
                 font-size: 50px;
                 text-align: center;
@@ -58,19 +59,27 @@
 </head>
 <body>
     <nav>
-        <h2 class="logo">HAR<span>RY</span> </h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="faculty.html">My Faculty</a></li>
-                <li><a href="fyp.html">FYP</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-
-        <div class="theme-toggle"></div>
-            <label for="theme-switch">Dark Mode:</label>
-            <input type="checkbox" id="theme-switch" class="theme-switch">
-        </div>
+        <h2 class="logo">HAR<span>RY</span></h2>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faculty.html">My Faculty</a></li>
+            <li><a href="fyp.html">FYP</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li>
+                <div class="theme-toggle">
+                    <label for="theme-switch">Dark / Light </label>
+                    <input type="checkbox" id="theme-switch" class="theme-switch">
+                </div>
+            </li>
+        </ul>
+        <a href="CV.pdf" class="btn" download="CV.pdf">Download Resume</a>
     </nav>
     
     <div class="container">

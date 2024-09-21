@@ -4,29 +4,388 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Sites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        section h2 {
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 5%;
+        }
+        #gallery:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px #e74c3c;
+                   }
+
+        #challenges:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px #e74c3c;
+        }
+        
+        .main:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px #e74c3c;
+        }
+
+        .galleryContainer{
+            background-color: var(--background-color);
+            align-items: center;
+        }
+      
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .slider {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-container {
+            width: 500%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-container input {
+            display: none;
+        }
+
+        .slide {
+            width: 20%;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navigation-manual {
+            position: absolute;
+            width: 100%;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .manual-btn {
+            border: 2px solid #fff;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 0 5px;
+        }
+
+        .manual-btn:hover {
+            background: #fff;
+        }
+
+        #radio1:checked ~ .first {
+            margin-left: 0;
+        }
+
+        #radio2:checked ~ .first {
+            margin-left: -20%;
+        }
+
+        #radio3:checked ~ .first {
+            margin-left: -40%;
+        }
+
+        #radio4:checked ~ .first {
+            margin-left: -60%;
+        }
+
+        #radio5:checked ~ .first {
+            margin-left: -80%;
+        }
+        .about{
+            padding:2%;
+            margin: 2%;
+        }
+
+        .about img{
+            width:100%;
+            height: auto;
+        }
+
+/* Global resets */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            padding: 20px;
+        }
+
+        /* General layout and styling for sections */
+        section {
+            background-color: var(--about-bg);
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 1000px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Styling for the challenge list */
+        .challenges-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .challenge-item {
+            background-color: var(--about-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+ 
+
+        /* Video embeds */
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: var(--background-color);
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        } 
+
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+            }
+
+            .challenges-list {
+                flex-direction: column;
+            }
+
+            h2 {
+                font-size: 1.75em;
+            }
+
+            h3 {
+                font-size: 1.25em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+        
+    </style>
 </head>
 <body>
-    <nav>
-        <h2 class="logo">HAR<span>RY</span> </h2>
+    <div class="GalleryConatiner">
+        <nav>
+            <h2 class="logo">HAR<span>RY</span></h2>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="faculty.html">My Faculty</a></li>
+                <li><a href="Faculty&Courses.html">Faculty & Courses</a></li>
                 <li><a href="fyp.html">FYP</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li>
+                    <div class="theme-toggle">
+                        <label for="theme-switch">Dark / Light </label>
+                        <input type="checkbox" id="theme-switch" class="theme-switch">
+                    </div>
+                </li>
             </ul>
+            <a href="CV.pdf" class="btn" download="CV.pdf">Download Resume</a>
+        </nav>
+        <div class="nav">
+            <ul>
+                <li><a href="#moments">Memorable Moments</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </div>
 
-            <div class="theme-toggle">
-                <label for="theme-switch">Dark Mode:</label>
-                <input type="checkbox" id="theme-switch" class="theme-switch">
-              </div>
-    </nav>
+
+        <section id="moments">
+            <h2>Memorable Moments</h2>
+            <div class="moments-list">
+                <section class="about">
+                    <div class="main">
+                        <div class="about-text">
+                        <h5><span>Orientation Day</span></span> </h5>
+                        <p>Participating in the university's orientation was an exhilarating experience. The whole group of new students was curiuos to find new things. Now when we are leaving university, remebering those events are memorable in real.</p>
+                        </div> 
+                        <img src="img/nascon.jpg" alt="haris">
+                    </div>
+                </section>
+
+                <section class="about">
+                    <div class="main">
+                        <div class="about-text">
+                        <h5><span>Nascon '24</span></span> </h5>
+                        <p>I am a web Developer and a desiger. I can make your dream site into a realistic one. I make websites interactive and eye-catching just perfect for your business.Just drop an email to contact me and I will get back to you soon. </p>
+                        </div> 
+                        <img src="img/class.jpeg" alt="haris">
+                    </div>
+                </section>
+
+                <section class="about">
+                    <div class="main">
+                        <div class="about-text">
+                        <h5><span>Fast Sports Gala</span></span> </h5>
+                        <p>The FAST Sports Gala'23 was a resounding success, bringing together participants from 52 corporate companies and showcasing their sportsmanship and competitive spirit. 
     
+                            The event was made possible with the support of various sponsors, including Confiz, NetSol, Lumensoft Technologies (Pvt) Ltd, Forrentech, Volta Football Association, HM Photography, and Red Bull. 
+                            
+                            The organizing team of the FAST Sports Society deserves appreciation for their meticulous planning and execution, ensuring a memorable experience for all involved.  </p>
+                        </div> 
+                        <img src="img/sportsGala.jpeg" alt="haris">
+                    </div>
+                </section>
+                </div>
+             
+        </section>
+
+        <section id="challenges">
+            <h2>Challenges and Overcoming Them</h2>
+            <div class="challenges-list">
+                <div class="challenge-item">
+                    <h3>Balancing Academics and Extracurriculars</h3>
+                    <p>Managing my time between rigorous coursework and leadership roles in student organizations was initially overwhelming. I overcame this by implementing strict scheduling and prioritization techniques, which greatly improved my productivity.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Advanced Algorithm Course</h3>
+                    <p>The advanced algorithms course proved to be exceptionally challenging. I struggled initially but overcame this by forming a study group, seeking help from professors during office hours, and dedicating extra time to practice problems.</p>
+                </div>
+                <!-- Add more challenges as needed -->
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Photo Gallery and Videos</h2>
+            <div class="slider">
+                <div class="slider-container">
+                    <input type="radio" name="radio-btn" id="radio1" checked>
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+    
+                    <div class="slide first">
+                        <img src="img/fast.jpeg" alt="Campus Life 1">
+                    </div>
+                    <div class="slide">
+                        <img src="img/nascon.jpg" alt="Tech Fest">
+                    </div>
+                    <div class="slide">
+                        <img src="img/fast2.jpeg" alt="Graduation Day">
+                    </div>
+                    <div class="slide">
+                        <img src="img/audi.jpeg" alt="Campus Life 2">
+                    </div>
+                    <div class="slide">
+                        <img src="img/class.jpeg" alt="Study Group">
+                    </div>
+                </div>
+    
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+                </div>
+            </div>
+ <!-- ... Rest of the gallery content ... -->
+
+ <h3>Campus Tour Video</h3>
+ <div class="video-embed">
+     <iframe src="https://www.youtube.com/watch?v=DuxVX27-YRQ" frameborder="0" allowfullscreen></iframe>
+ </div>
+ <h3>Student Testimonial</h3>
+ <div class="video-embed">
+     <iframe src="https://www.youtube.com/embed/ANOTHER_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+ </div>
+ <h3>Nascon</h3>
+ <div class="video-embed">
+     <iframe src="https://www.youtube.com/embed/ANOTHER_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+ </div>
+</section>
+</div>
+
+
 </body>
 </html>

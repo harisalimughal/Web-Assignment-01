@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Sites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+      section h2{
+        color: var(--text-color);
+        text-align: center;
+        margin-bottom: 5%;
+        
+      }
+
+      /* Hide all sections by default */
+
+     section {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease, height 0s ease 0.5s;
+       } 
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <h2 class="logo">HAR<span>RY</span></h2>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Faculty&Courses.html">Faculty & Courses</a></li>
+                <li><a href="fyp.html">FYP</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li>
+                    <div class="theme-toggle">
+                        <label for="theme-switch">Dark / Light </label>
+                        <input type="checkbox" id="theme-switch" class="theme-switch">
+                    </div>
+                </li>
+            </ul>
+            <a href="CV.pdf" class="btn" download="CV.pdf">Download Resume</a>
+        </nav>
+        <div class="nav">
+            <ul>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#faculty">Faculty</a></li>
+            </ul>
+            <ul>
+                <li><a href="#computing">Computing</a></li>
+                <li><a href="#maths">Maths</a></li>
+                <li><a href="#elective">Elective</a></li>
+            </ul>
+        </div>
+        <div class="nav">
+
+        </div>
+
+        
+        <section id="faculty">
+            <h2>Faculty</h2>
+            <div class="faculty-list">
+                <div class="faculty-item">
+                    <img src="img/islam.jpeg" alt="Muhammad Islam">
+                    <h3>Muhammad Islam</h3>
+                    <h5>AI Scholar, Teacher <span>& Actor</span> </h5>
+                    <p>He taught me Programming Fundamentals and OOP Courses. A handsome personality, doing acting in dramas also.</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/shahbaz.jpeg" alt="Shahbaz Hassan">
+                    <h3>Shahbaz Hassan</h3>
+                    <h5>PhD Scholar <span>& ML Expert</span> </h5>
+                    <p>He taught me Applied Physics and DLD courses in Riphah International University Islamabad. He is very nice and harworking teacher. Now-a-days teaching in Fast Nuces Islamabad</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/zubair.jpeg" alt="Muhammad Zubair">
+                    <h3>Muhammad Zubair</h3>
+                    <h5>Chair Person <span>Intelligence Society</span> </h5>
+                    <p>He taught me Discrete Structures Course in Riphah International University Islamabad. He is very polite person. He has done educational tours of japan and other countries</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/noor.png" alt="Noor">
+                    <h3>Noor ul AIn</h3>
+                    <h5>Professor <span>& Teacher</span> </h5>
+                    <p>He taught me Design and Algorithm Course in Fast University Islamabad. He is very nice and harworking teacher. Now-a-days teaching in Fast Nuces Islamabad</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/asim.png" alt="asim">
+                    <h3>Muhammad Asim </h3>
+                    <h5>PhD Scholar <span>& HOD</span> </h5>
+                    <p>He taught me Computer Networking Course in Fast University Islamabad. He is very nice and harworking teacher. Now-a-days teaching in Fast Nuces Islamabad</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/ali.jpg" alt="ali">
+                    <h3>Shahbaz Hassan</h3>
+                    <h5>PhD Supervisor <span>& Professor</span> </h5>
+                    <p>He taught me LA and Numerical Computing. He is one of the most senior professor in Fast Universoty Islamabad. He is very hardworking and diligent teacher</p>
+                </div>
+               
+                <div class="faculty-item">
+                    <img src="img/aqib.jpeg" alt="Aqib Rehman">
+                    <h3>Aqib Rehman</h3>
+                    <h5>Teacher <span>& Developer</span> </h5>
+                    <p>He is teaching me web programming course. He is a very diligent teacher and a developer.</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/ayesha.png" alt="Ayesha">
+                    <h3>Ayesha Yaqoob</h3>
+                    <h5>Teacher <span>& Lecturer</span> </h5>
+                    <p>He taught me web FOM course. He is a very diligent teacher and friendly teacher.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+        <section id="courses">
+            <h2>Courses</h2>
+            <div class="course-list">
+                <div class="course-item">
+                    <h3><span>Programming Fundamentals</span></h3>
+                    <p>Introduction to basic programming concepts using Python.</p>
+                </div>
+                <div class="course-item">
+                    <h3><span>Algorithms and Complexity</span></h3>
+                    <p>Study of algorithm design and analysis techniques.</p>
+                </div>
+                <div class="course-item ">
+                    <h3><span>Computer Networks</span></h3>
+                    <p>Implementation and analysis of fundamentals of Computer Networks.</p>
+                </div>
+                <div class="course-item">
+                    <h3><span>Applied Physics</span></h3>
+                    <p>Application of physics principles in real-world scenarios.</p>
+                </div>
+
+                <div class="course-item">
+                    <h3><span>FOM</span></h3>
+                    <p>Application of fundamentals of marketing.</p>
+                </div>
+
+                <div class="course-item">
+                    <h3><span>Discrete Structures</span></h3>
+                    <p>Application of Graps and Trees and related things.</p>
+                </div>
+
+                <div class="course-item">
+                    <h3><span>DLD</span></h3>
+                    <p>Application of digital and logic design.</p>
+                </div>
+
+                <div class="course-item">
+                    <h3><span>Web Programming</span></h3>
+                    <p>Web Development and Designing.</p>
+                </div>
+                <div class="course-item">
+                    <h3><span>Marketing</span></h3>
+                    <p>Application of fundamentals of marketing.</p>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <section id="computing">
+            <h2>Computing Courses and Faculty</h2>
+            <div class="course-list">
+                <div class="course-item">
+                    <h3><span>Programming Fundamentals</span></h3>
+                    <p>Introduction to basic programming concepts using Python.</p>
+                </div>
+                <div class="course-item computer-science algorithms">
+                    <h3><span>Algorithms and Complexity</span></h3>
+                    <p>Study of algorithm design and analysis techniques.</p>
+                </div>
+                <div class="course-item mathematics data-structures">
+                    <h3><span>Computer Networking</span></h3>
+                    <p>Implementation and analysis of fundamentals of Network.</p>
+                </div>
+
+                <div class="faculty-item">
+                    <img src="img/islam.jpeg" alt="Muhammad Islam">
+                    <h3>Muhammad Islam</h3>
+                    <h5>AI Scholar, Teacher <span>& Actor</span> </h5>
+                    <p>He taught me Programming Fundamentals and OOP Courses. A handsome personality, doing acting in dramas also.</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/noor.png" alt="Noor">
+                    <h3>Noor ul AIn</h3>
+                    <h5>Professor <span>& Teacher</span> </h5>
+                    <p>He taught me Design and Algorithm Course in Fast University Islamabad. He is very nice and harworking teacher. Now-a-days teaching in Fast Nuces Islamabad</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/asim.png" alt="asim">
+                    <h3>Muhammad Asim </h3>
+                    <h5>PhD Scholar <span>& HOD</span> </h5>
+                    <p>He taught me Computer Networking Course in Fast University Islamabad. He is very nice and harworking teacher. Now-a-days teaching in Fast Nuces Islamabad</p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <section id="maths">
+            <h2>Maths Courses and Faculty</h2>
+            <div class="course-list">
+                <div class="course-item physics">
+                    <h3><span>Applied Physics</span></h3>
+                    <p>Application of physics principles in real-world scenarios.</p>
+                </div>
+                <div class="course-item computer-science algorithms">
+                    <h3><span>Discrete Structure</span></h3>
+                    <p>Application of Graps and Trees and related things.</p>
+                </div>
+                <div class="course-item ">
+                    <h3><span>Linear Algebra</span></h3>
+                    <p>Implementation and analysis of Linear Algebra</p>
+                </div>
+
+                <div class="faculty-item">
+                    <img src="img/shahbaz.jpeg" alt="Shahbaz Hassan">
+                    <h3>Shahbaz Hassan</h3>
+                    <h5>PhD Scholar <span>& ML Expert</span> </h5>
+                    <p>He taught me Applied Physics and DLD courses in Riphah International University Islamabad. He is very nice and harworking teacher. Now-a-days teaching in Fast Nuces Islamabad</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/zubair.jpeg" alt="Muhammad Zubair">
+                    <h3>Muhammad Zubair</h3>
+                    <h5>Chair Person <span>Intelligence Society</span> </h5>
+                    <p>He taught me Discrete Structures Course in Riphah International University Islamabad. He is very polite person. He has done educational tours of japan and other countries</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/ali.jpg" alt="Shahbaz Hassan">
+                    <h3>Muhammad ALi</h3>
+                    <h5>PhD Supervisor <span>& Professor</span> </h5>
+                    <p>He taught me LA and Numerical Computing. He is one of the most senior professor in Fast Universoty Islamabad. He is very hardworking and diligent teacher</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        
+        <section id="elective">
+            <h2>Elective Courses and Faculty</h2>
+            <div class="course-list">
+                <div class="course-item physics">
+                    <h3><span>Web Programming</span></h3>
+                    <p>Web Development and Designing.</p>
+                </div>
+                <div class="course-item">
+                    <h3><span>FOM</span></h3>
+                    <p>Application of fundamentals of marketing.</p>
+                </div>
+                <div class="course-item">
+                    <h3><span>Marketing</span></h3>
+                    <p>Application of fundamentals of marketing.</p>
+                </div>
+
+                <div class="faculty-item">
+                    <img src="img/aqib.jpeg" alt="Aqib Rehman">
+                    <h3>Aqib Rehman</h3>
+                    <h5>Teacher <span>& Developer</span> </h5>
+                    <p>He is teaching me web programming course. He is a very diligent teacher and a developer.</p>
+                </div>
+                <div class="faculty-item">
+                    <img src="img/ayesha.png" alt="Ayesha">
+                    <h3>Ayesha Yaqoob</h3>
+                    <h5>Teacher <span>& Lecturer</span> </h5>
+                    <p>He taught me web FOM course. He is a very diligent teacher and friendly teacher.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+    
+</body>
+</html>

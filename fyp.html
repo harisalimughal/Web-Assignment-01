@@ -4,29 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Sites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            background-color: #3498db;
+            color: (--text-color);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--about-bg);
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px #e74c3c;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .highlight {
+            background-color: var(--accent-color);
+            color: var(--accent-color);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .timeline {
+            list-style-type: none;
+            padding: 0;
+        }
+        .timeline li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .timeline li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        .contact-info {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
     <nav>
-        <h2 class="logo">HAR<span>RY</span> </h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="faculty.html">My Faculty</a></li>
-                <li><a href="fyp.html">FYP</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-
-            <div class="theme-toggle">
-                <label for="theme-switch">Dark Mode:</label>
-                <input type="checkbox" id="theme-switch" class="theme-switch">
-              </div>
+        <h2 class="logo">HAR<span>RY</span></h2>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faculty.html">My Faculty</a></li>
+            <li><a href="fyp.html">FYP</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li>
+                <div class="theme-toggle">
+                    <label for="theme-switch">Dark / Light </label>
+                    <input type="checkbox" id="theme-switch" class="theme-switch">
+                </div>
+            </li>
+        </ul>
+        <a href="CV.pdf" class="btn" download="CV.pdf">Download Resume</a>
     </nav>
     
+    <header>
+        <h1>AI-Powered Smart City Management System</h1>
+        <p>Revolutionizing Urban Living Through Intelligent Technology</p>
+    </header>
+
+
+    <div class="container">
+        <section class="section">
+            <h2>Project Scope</h2>
+            <p>This Final Year Project aims to develop an innovative AI-powered system for efficient smart city management, focusing on enhancing urban living through intelligent data analysis and automation.</p>
+        </section>
+
+        <section class="section">
+            <h2>Objectives</h2>
+            <ul>
+                <li>To develop an AI-driven platform for real-time city data analysis</li>
+                <li>To address urban challenges such as traffic congestion, energy efficiency, and waste management</li>
+                <li>To implement machine learning algorithms for predictive maintenance of city infrastructure</li>
+                <li>To improve overall quality of life for citizens through smart technology integration</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Expected Outcomes</h2>
+            <ul>
+                <li>A functional prototype of the AI-powered Smart City Management System</li>
+                <li>Comprehensive documentation of the system architecture and AI models used</li>
+                <li>Analysis of the system's effectiveness in improving city operations</li>
+                <li>A roadmap for future enhancements and potential citywide implementation</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Methodology</h2>
+            <ol>
+                <li>Extensive research on existing smart city technologies and AI applications</li>
+                <li>Design of system architecture and selection of appropriate AI/ML models</li>
+                <li>Development of the core platform and integration with IoT devices</li>
+                <li>Implementation of data analytics and visualization components</li>
+                <li>Rigorous testing in simulated urban environments</li>
+                <li>Performance evaluation and optimization</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Timeline</h2>
+            <ul class="timeline">
+                <li>Project Proposal Submission: September 15, 2024</li>
+                <li>Design Document Completion: October 30, 2024</li>
+                <li>Prototype Development: January 15, 2025</li>
+                <li>Testing Phase: February 28, 2025</li>
+                <li>Final Report Submission: April 15, 2025</li>
+                <li>Project Presentation: May 1, 2025</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Resources Required</h2>
+            <ul>
+                <li>Hardware: High-performance computing cluster, IoT sensors and devices</li>
+                <li>Software: TensorFlow, PyTorch, Apache Kafka, Elasticsearch</li>
+                <li>Data: Urban datasets from local government agencies, real-time IoT data streams</li>
+                <li>Expertise: Machine Learning, Big Data Analytics, IoT Integration, Urban Planning</li>
+            </ul>
+        </section>
+
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Name:</strong> Haris Ali Mughal<br>
+            <strong>Email:</strong> i220747@nu.edu.pk<br>
+            <strong>Supervisor:</strong> Dr. Muhammad Haris</p>
+        </section>
+    </div>
 </body>
 </html>
