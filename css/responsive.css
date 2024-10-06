@@ -94,7 +94,7 @@
     margin-top: 20px;
     align-self: center;
   }
-}
+
 
 
 
@@ -199,7 +199,10 @@ h3 {
 footer {
   height: auto;
   padding: 50px 0;
+  font-size: medium;
 }
+}
+
 
 /* Tablet styles */
 @media screen and (min-width: 768px) {
